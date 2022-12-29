@@ -3,9 +3,8 @@ var $_GET = {};
 if(document.location.toString().indexOf('?') !== -1) {
     var query = document.location
                    .toString()
-                   // get the query string
+                   
                    .replace(/^.*?\?/, '')
-                   // and remove any existing hash string (thanks, @vrijdenker)
                    .replace(/#.*$/, '')
                    .split('&');
 
@@ -14,6 +13,6 @@ if(document.location.toString().indexOf('?') !== -1) {
        $_GET[aux[0]] = aux[1];
     }
 }
-//get the 'index' query parameter
-document.write($_GET['index']);
+
+document.write($_GET['scr']);
 </script>
